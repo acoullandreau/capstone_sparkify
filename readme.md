@@ -161,6 +161,6 @@ From there on, we can already foresee further work and improvements:
 Acknowlegments and related content
 ------------------------------------
 
-The dataset used in this project was provided by Udacity.
+The dataset used in this project was provided by Udacity. It is available [here](https://s3.console.aws.amazon.com/s3/buckets/udacity-dsnd/sparkify/?region=eu-west-3&tab=overview#).
 This project is part of the UDACITY Data Scientist Nanodegree.
 
