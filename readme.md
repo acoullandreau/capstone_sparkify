@@ -15,9 +15,7 @@ In this repository the focus is on the mini-dataset for now. But note that due t
 In this repository, you will find:
 
 - A Jupyter notebook that goes through the process of exploring the data, engineering features and building a machine leaning classification model
-- The summary built from the mini-dataset with the best deviation ratio for cancel churn
-- The summary built from the mini-dataset with the best deviation ratio for downgrade churn
-- The best trained model
+- The plots saved as png
 - This readme file
 
 
@@ -100,14 +98,13 @@ Impact of the time before an upgrade or a downgrade
 ![alt text](images/exploratory_reg_downgrade_intertime.png "Time between registration and downgrade")
 ![alt text](images/exploratory_upgrade_downgrade_intertime.png "Time between upgrade and downgrade")
 
-
+---------------------------------------------
 
 Time-series potential
 -------------------
 Besides, we realised that it was actually limiting to aggregate values per user without using the full potential of time-series data. Dealing with time-series data allows us to get an idea of **how the behavior of a user changes over time**, and we do not base our prediction solely on an aggreated observation such as average, or the last event that occured.
 In this extent, we decided to engineer features including both counts and deviations between one week and the preceeding ones, assign a weight to recent event and older events as to give more importance to recent events. We tested with a few ratios (80%/20%, 70%/30%, 60%/40%), and it is during the modeling step that we figured out the best results were obtained using the 70%/30% ratio. 
 
----------------------------------------------
 
 Feature engineering
 -------------------
@@ -130,6 +127,7 @@ Then we combine all the transformed features to a single vector, and here we go!
 
 
 ---------------------------------------------
+
 Modeling
 -----------------------------
 
@@ -148,7 +146,6 @@ Our conclusions were the following:
 
 ---------------------------------------------
 
-
 Further work and improvements
 -----------------------------
 
@@ -159,9 +156,10 @@ From there on, we can already foresee further work and improvements:
 - expand our work to predict WHEN a user would churn
 - deploy this code on AWS clusters to experiment with the full dataset 
 
+---------------------------------------------
 
-Sources, acknowlegments and related content
--------------------------------------------
+Acknowlegments and related content
+------------------------------------
 
 The dataset used in this project was provided by Udacity.
 This project is part of the UDACITY Data Scientist Nanodegree.
