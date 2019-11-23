@@ -1,0 +1,4 @@
+*.crc
+*.parquet
+*_SUCCESS
+*checkpoint*
